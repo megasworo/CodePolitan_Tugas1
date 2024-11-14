@@ -1,0 +1,70 @@
+.title {
+    text-align: center;
+}
+
+.galeriProduk {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.cardProduk {
+    width: 200px;
+    height: 250px;
+    border: 3px solid orange;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 10px;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 5px #888;
+}
+
+.cardProduk:hover {
+    transform: scale(1.5, 1.25);
+    -moz-transform: scale(1.5, 1.25);
+    -ms-transform: scale(1.5, 1.25);
+    -webkit-transform: scale(1.5, 1.25);
+    -o-transform: scale(1.5, 1.25);
+    -moz-box-shadow: 5px 5px 5px #888;
+    -webkit-box-shadow: 5px 5px 5px #888;
+    box-shadow: 5px 5px 5px #888;
+}
+
+.imgProduk {
+    width: 100%;
+    height: 150px;
+}
+
+.imgProduk img {
+    width: 100%;
+    height: 100%;
+}
+
+.caption {
+    text-align: center;
+}
+
+.namaProduk {
+    margin-top: 10px;
+}
+
+.harga {
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+
+.caption button {
+    background-color: orange;
+    border: 1px solid orange;
+    color: white;
+    border-radius: 10px;
+    width: 50px;
+    height: 30px;
+}
+
+.caption button:hover {
+    background-color: orangered;
+}
