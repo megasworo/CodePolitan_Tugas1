@@ -1,9 +1,13 @@
+html, body {
+    margin: 0;
+}
+
 .title {
     text-align: center;
 }
 
 .galeriProduk {
-    width: 90%;
+    width: 70%;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -18,53 +22,189 @@
     border-radius: 10px;
     overflow: hidden;
     margin: 10px 10px;
-    background-color: #ffffff;
     box-shadow: 5px 5px 5px #888;
+    position: relative;
+    cursor: pointer;
 }
 
 .cardProduk:hover {
     transform: scale(1.5, 1.25);
-    -moz-transform: scale(1.5, 1.25);
-    -ms-transform: scale(1.5, 1.25);
-    -webkit-transform: scale(1.5, 1.25);
-    -o-transform: scale(1.5, 1.25);
-    -moz-box-shadow: 5px 5px 5px #888;
-    -webkit-box-shadow: 5px 5px 5px #888;
     box-shadow: 5px 5px 5px #888;
+    z-index: 5;
 }
 
 .imgProduk {
     width: 100%;
-    height: 150px;
+    height: 100%;
 }
 
 .imgProduk img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .caption {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 10px;
     text-align: center;
 }
 
 .namaProduk {
     margin-top: 10px;
+    background-color: white;
 }
 
 .harga {
     margin-top: -20px;
     margin-bottom: 10px;
+    background-color: white;
 }
 
 .caption button {
     background-color: orange;
     border: 1px solid orange;
-    color: white;
     border-radius: 10px;
     width: 50px;
     height: 30px;
+    color: white;
 }
 
 .caption button:hover {
-    background-color: orangered;
+    background-color: orangered;    
+    border: 1px solid orangered;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 50%;
+    height: 60%;
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+#caption {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-weight: bold;
+    font-size: large;
+    background-color: white;
+}
+
+.mySlides {
+    width: 100%;
+    height: 100%;
+}
+
+.gambarProduk {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+  
+/* The Close Button */
+.close {
+    color: white;
+    position: absolute;
+    top: 70px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+  
+.close:hover {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+.mySlides {
+    display: none;
+}
+  
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+  
+  /* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media only screen and (max-width: 600px) {
+
+    .galeriProduk {
+        width: 100%;
+    }
+
+    .modal-content {
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0;
+        width: 90%;
+        height: 45%;
+        max-width: 1200px;
+        border-radius: 20px;
+        border: 3px solid white;
+    }
+    
+    #caption {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        font-weight: bold;
+        font-size: large;
+        background-color: white;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .cardProduk {
+        width: 90%;
+    }
 }
